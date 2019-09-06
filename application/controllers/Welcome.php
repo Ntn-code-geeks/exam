@@ -10,11 +10,13 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
+		$data['title'] = "TA DA Report";
+		$data['page_name'] = "TA DA Report";
 		$sess=$this->session->userdata();
 		if( (!empty($sess['user_id'])) && (!empty($sess['username'])) ){
 			redirect('welcome/dashboard');
 		}else{
-			$this->load->get_view('main');
+			$this->load->get_view('main',$data);
 		}
 	}
 

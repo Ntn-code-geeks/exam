@@ -4,7 +4,7 @@
 <body style="margin:0;padding:0">
 <div style="width:100%;min-width:320px;font-family:Helvetica,Arial;font-weight:bold;font-size:24px;margin-top: 120px;">
 
-	<div style="margin:0 auto;width:100%;max-width: 720px;text-align:center;background-color:#242e30">
+	<div style="margin:0 auto;width:100%;max-width: 720px;text-align:center;background-color:#242e30; box-shadow: 0px 12px 17px rgba(0,0,0,0.26);">
 		<div align="center" width="220px" height="42" bgcolor="#ffffff" style="float: right; width: 100px;background:#ffffff;
 	border-style: solid;border-color: #242e30;color:#ffffff;display:block">
 			<a onclick="logOut()" style="font-size:14px;color:#28b777;text-decoration:none;line-height:42px;width:100%;
