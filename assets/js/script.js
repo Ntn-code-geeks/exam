@@ -98,9 +98,11 @@ function startExm() {
 		text: "\n Get Ready..!\n  You're Exam is Starting In 5 seconds.! \n  Loading Portal....",
 		type: "success",
 		showConfirmButton:false,
+		timer: 5000
 	});
 	setTimeout(function(){
-		window.location.href=host+"timer";
+		// window.location.href=host+"timer";
+		window.open(host+"timer");
 	}, 5000);
 }
 
@@ -123,7 +125,7 @@ function logOut() {
 	let host =  $('#base').val();
 	swal({
 		title: "  ",
-		text: "\n Data UnSaved..!\n  You're Logging Out. In 3 seconds.! \n  Wait....",
+		text: "\n  You're Logging Out. In 3 seconds.! \n  Wait....",
 		type: "warning",
 		showConfirmButton:false,
 	});

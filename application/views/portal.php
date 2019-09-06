@@ -1,7 +1,7 @@
 <div id="time" style="margin-right: 180px; margin-top:5px;float: right; font-size: 25px; padding: 2px 21px 1px;
 border: 2px solid red; border-radius: 5px;"></div>
-<input type="hidden" id="base" value="<?= base_url();?>" style="display: none;">
-<div class="container" id="containerID">
+
+<div class="container">
   <div class="row">
     <!-- Main Content -->
     <div class="col-xs-12 col-lg-12 col-sm-12 col-md-12">
@@ -237,8 +237,8 @@ border: 2px solid red; border-radius: 5px;"></div>
 
 <script type="text/javascript">
  $( document ).ready(function() {
-     var base = $('#base').val();
-    var insertZero = n => n < 10 ? "0"+n : ""+n,
+
+         var insertZero = n => n < 10 ? "0"+n : ""+n,
          displayTime = n => n ? time.textContent = insertZero(~~(n/3600)%3600) + ":" +
              insertZero(~~(n/60)%60) + ":" +
              insertZero(n%60)

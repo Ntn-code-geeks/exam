@@ -12,11 +12,7 @@
 			<input type="password" name="upass" id="upass" autocomplete="off" placeholder="Enter password"/>
 			<button type="submit" name="log" onclick="logIn()" class="btn login">login</button>
 		<?php  //echo form_close();  ?>
-			<p><a href="javascript:void(0)">Forgotten account</a></p>
-			<hr/>
-			<button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign in with google</button>
-			<button type="button" class="btn -box-sd-effect"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign in with linkedin</button>
-			<button type="button" class="btn -box-sd-effect"> <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign in with microsoft</button>
+<!--			<p><a href="javascript:void(0)">Forgotten account</a></p>-->
 
 	</div>
 
@@ -29,14 +25,7 @@
 				account</button>
 		<?php  //echo form_close();  ?>
 			<p>Clicking <strong>create account</strong> means that you are agree to our <a href="javascript:void(0)">terms of services</a>.</p>
-			<hr/>
-			<button type="button" class="btn -box-sd-effect">
-				<i class="fa fa-google fa-lg" aria-hidden="true"></i> sign up with google</button>
-			<button type="button" class="btn -box-sd-effect">
-				<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign up with linkedin</button>
-			<button type="button" class="btn -box-sd-effect">
-				<i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign up with microsoft</button>
-
+			
 	</div>
 
 </div>
