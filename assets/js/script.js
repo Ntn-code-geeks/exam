@@ -15,6 +15,7 @@ function toggleLogin(){
 	document.getElementById("signup-form").style.display="none";
 	document.getElementById("login-form").style.display="block";
 }
+
 function Register(){
 	let email = $('#uemail').val();
 	let name = $('#uname').val();
@@ -61,19 +62,19 @@ function logIn(){
 			};
 			$.ajax({
 				type:"POST",
-				url  : "welcome/login",
+				url  : "login",
 				dataType: 'JSON',
 				data:dataArry,
 				success:function (data) {
 					if(data==1){
 					    swal({
-							title: 'Congratulations!',
+							title: 'Yeahh.!',
 							text: "You are Successfully Logged In.  Redirecting....",
 							type: 'success',
 							showConfirmButton:false,
 						})
 						setTimeout(function(){
-							window.location.href="welcome/dashboard";
+							window.location.href="dashboard";
 							}, 3000);
 
 					}else{
@@ -88,4 +89,45 @@ function logIn(){
 			});
 		}
 
+}
+
+function startExm() {
+	let host =  $('#base').val();
+	swal({
+		title: "  ",
+		text: "\n Get Ready..!\n  You're Exam is Starting In 5 seconds.! \n  Loading Portal....",
+		type: "success",
+		showConfirmButton:false,
+	});
+	setTimeout(function(){
+		window.location.href=host+"timer";
+	}, 5000);
+}
+
+
+
+/*Logout Functions*/
+function exitExam() {
+	let host =  $('#base').val();
+	swal({
+		title: "  ",
+		text: "\n Data UnSaved..!\n  You're Logging Out. In 3 seconds.! \n  Wait....",
+		type: "warning",
+		showConfirmButton:false,
+	});
+	setTimeout(function(){
+		window.location.href="welcome/logout";
+	}, 3000);
+}
+function logOut() {
+	let host =  $('#base').val();
+	swal({
+		title: "  ",
+		text: "\n Data UnSaved..!\n  You're Logging Out. In 3 seconds.! \n  Wait....",
+		type: "warning",
+		showConfirmButton:false,
+	});
+	setTimeout(function(){
+		window.location.href="logout";
+	}, 3000);
 }

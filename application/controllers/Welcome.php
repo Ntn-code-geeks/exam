@@ -10,7 +10,12 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->get_view('main');
+		$sess=$this->session->userdata();
+		if( (!empty($sess['user_id'])) && (!empty($sess['username'])) ){
+			redirect('welcome/dashboard');
+		}else{
+			$this->load->get_view('main');
+		}
 	}
 
 	public function login(){
@@ -26,11 +31,17 @@ class Welcome extends CI_Controller {
 	}
 
 	public function dashboard(){
-		$this->load->get_view('dashboard');
+		$sess=$this->session->userdata();
+		if( (!empty($sess['user_id'])) && (!empty($sess['username'])) ){
+			$this->load->get_view('dashboard');
+		}else{
+			$this->load->get_view('main');
+		}
 	}
 
 	public function logout(){
 		session_destroy();
+		$this->index();
 	}
 
 
