@@ -62,7 +62,7 @@ function logIn(){
 			};
 			$.ajax({
 				type:"POST",
-				url  : "login",
+				url  : "welcome/login",
 				dataType: 'JSON',
 				data:dataArry,
 				success:function (data) {
@@ -74,7 +74,7 @@ function logIn(){
 							showConfirmButton:false,
 						})
 						setTimeout(function(){
-							window.location.href="dashboard";
+							window.location.href="welcome/dashboard";
 							}, 3000);
 
 					}else{
@@ -105,6 +105,84 @@ function startExm() {
 		window.open(host+"timer");
 	}, 5000);
 }
+function submitExm(){
+	let fname=$('#Fname').val();
+	let mname=$('#mname').val();
+	let lname=$('#lname').val();
+	let gender=$('#gender').val();
+	let relation=$('#relation').val();
+	let social=$('#socialS').val();
+	let socialSec=$('#socialSecure').val();
+	let dob=$('#DOB').val();
+	let add1=$('#address1').val();
+	let add2=$('#address2').val();
+	let city=$('#city').val();
+	let state=$('#state').val();
+	let zip=$('#zip').val();
+	let home=$('#Htele').val();
+	let work=$('#Wtele').val();
+	let mob=$('#mobile').val();
+	let email=$('#email').val();
+	let mailtype=$('#mailtype').val();
+	let agree1=$('#agree1').val();
+	let agree2=$('#agree2').val();
+	let agree3=$('#agree3').val();
+
+	let dataArr= {
+		'first_name' : fname,
+		'mid_name' : mname,
+		'last_name' : lname,
+		'gender' : gender,
+		'relation' : relation,
+		'social_num' : social,
+		'social_ses_code' : socialSec,
+		'dob' : dob,
+		'address1' : add1,
+		'address2' : add2,
+		'city' : city,
+		'state' : state,
+		'zip' : zip,
+		'home_tele' : home,
+		'work_tele' : work,
+		'mobile' : mob,
+		'email' : email,
+		'email_type' : mailtype,
+		'agreement1' : agree1,
+		'agreement2' : agree2,
+		'agreement3' : agree3,
+	};
+
+	$.ajax({
+		type:"POST",
+		url  : "timer/formdata",
+		dataType: 'JSON',
+		data:dataArr,
+		success:function (data) {
+			if(data==1){
+				swal({
+					title: 'Yeahh.!',
+					text: "You're Form has been Successfully Submitted.  Redirecting....",
+					type: 'success',
+					showConfirmButton:false,
+				})
+				setTimeout(function(){
+					window.location.href="welcome/dashboard";
+				}, 3000);
+
+			}else{
+				swal({
+					title: 'Error!!',
+					text: "There might be some problem. Please Try after sometime.",
+					type: 'warning',
+					showConfirmButton:false,
+					timer: 3000,
+				})
+			}
+		}
+	});
+
+
+}
 
 
 
@@ -133,3 +211,5 @@ function logOut() {
 		window.location.href="logout";
 	}, 3000);
 }
+
+

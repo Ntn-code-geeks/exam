@@ -13,33 +13,33 @@ border: 2px solid red; border-radius: 5px;"></div>
       </div>
 
 <!--      <form>-->
-		<?php  echo form_open($action);  ?>
+		<?php  //echo form_open($action);  ?>
         <div class="row">
           <div class="col-lg-6 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">First Name</label>
-              <input type="text" name="Fname" class="form-control" id="exampleInputEmail1" placeholder="First Name">
+              <input type="text" id="Fname" class="form-control" id="exampleInputEmail1" placeholder="First Name">
             </div>
           </div>
           
           <div class="col-lg-offset-0 col-lg-6 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">Middle Name</label>
-              <input type="text" name="mname" class="form-control" id="exampleInputEmail1" placeholder="Middle Name">
+              <input type="text" id="mname" class="form-control" id="exampleInputEmail1" placeholder="Middle Name">
             </div>
           </div>
 
           <div class="col-lg-offset-0 col-lg-6 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">Last Name</label>
-              <input type="text" name="lname" class="form-control" id="exampleInputEmail1" placeholder="Last Name">
+              <input type="text" id="lname" class="form-control" id="exampleInputEmail1" placeholder="Last Name">
             </div>
           </div>
 
           <div class="col-lg-offset-0 col-lg-3 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="Gender" class="select">Gender</label>
-              <select name="gender" class="form-control">
+              <select id="gender" class="form-control">
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>
@@ -49,7 +49,7 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-3 col-xs-12 col-sm-12">
             <div class="form-group">
               <label for="Gender" class="select">Relationship to victim</label>
-              <select name="relation" class="form-control">
+              <select id="relation" class="form-control">
                   <option value="self">Self</option>
                   <option value="family">Family Member that Witnessed the Crime</option>
                   <option value="other">Other</option>
@@ -60,7 +60,7 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-6 col-xs-12 col-sm-12">
             <div class="form-group">
               <label for="Gender" class="select">Does the claimant have a Social Security Number?</label>
-              <select name="socialS" class="form-control">
+              <select id="socialS" class="form-control">
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
                 </select>
@@ -70,21 +70,21 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-3 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">Social Security #</label>
-              <input type="text" name="socialSecure" class="form-control" id="exampleInputEmail1" placeholder="SS#">
+              <input type="text" id="socialSecure" class="form-control" id="exampleInputEmail1" placeholder="SS#">
             </div>
           </div>
 
           <div class="col-lg-offset-0 col-lg-3 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">Date of Birth</label>
-              <input type="text" name="DOB" class="form-control" id="exampleInputEmail1" placeholder="Date of Birth">
+              <input type="text" id="DOB" class="form-control" id="exampleInputEmail1" placeholder="Date of Birth">
             </div>
           </div>
 
           <div class="col-lg-offset-0 col-lg-6 col-xs-12">
             <div class="form-group">
               <label for="exampleInputEmail1">Mailing Address</label>
-              <input type="text" name="address1" class="form-control" id="exampleInputEmail1" placeholder="Street Number
+              <input type="text" id="address1" class="form-control" id="exampleInputEmail1" placeholder="Street Number
                and Name or
                P.O. Box">
             </div>
@@ -93,7 +93,7 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-6 col-xs-12 col-sm-12">
             <div class="form-group">
               <label for="exampleInputEmail1">Address 2</label>
-              <input type="text" name="address2" class="form-control" id="exampleInputEmail1" placeholder="Apartment or
+              <input type="text" id="address2" class="form-control" id="exampleInputEmail1" placeholder="Apartment or
               Unit #">
             </div>
           </div>
@@ -101,28 +101,28 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-4 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">City</label>
-              <input type="text" name="city" class="form-control" id="exampleInputEmail1" placeholder="Sacramento">
+              <input type="text" id="city" class="form-control" id="exampleInputEmail1" placeholder="Sacramento">
             </div>
           </div>
 
           <div class="col-lg-offset-0 col-lg-2 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">State</label>
-              <input type="text" name="state" class="form-control" id="exampleInputEmail1" placeholder="CA">
+              <input type="text" id="state" class="form-control" id="exampleInputEmail1" placeholder="CA">
             </div>
           </div>
 
           <div class="col-lg-offset-0 col-lg-6 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">Zip</label>
-              <input type="text" name="zip" class="form-control" id="exampleInputEmail1" placeholder="95822">
+              <input type="text" id="zip" class="form-control" id="exampleInputEmail1" placeholder="95822">
             </div>
           </div>
 
           <div class="col-lg-offset-0 col-lg-6 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">Home Telephone</label>
-              <input type="text" name="Htele" class="form-control" id="exampleInputEmail1" placeholder="(916)
+              <input type="text" id="Htele" class="form-control" id="exampleInputEmail1" placeholder="(916)
               345-6783">
             </div>
           </div>
@@ -130,7 +130,7 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-6 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">Work Telephone</label>
-              <input type="text" name="Wtele" class="form-control" id="exampleInputEmail1" placeholder="(916) 345-0000
+              <input type="text" id="Wtele" class="form-control" id="exampleInputEmail1" placeholder="(916) 345-0000
               x123">
             </div>
           </div>
@@ -138,7 +138,7 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-6 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">Cell Phone</label>
-              <input type="text" name="mobile" class="form-control" id="exampleInputEmail1" placeholder="(916)
+              <input type="text" id="mobile" class="form-control" id="exampleInputEmail1" placeholder="(916)
               345-2345">
             </div>
           </div>
@@ -146,7 +146,7 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-4 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="exampleInputEmail1">E-Mail</label>
-              <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="andrey@mylife
+              <input type="email" id="email" class="form-control" id="exampleInputEmail1" placeholder="andrey@mylife
               .com">
             </div>
           </div>
@@ -154,7 +154,7 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-2 col-xs-12 col-sm-6">
             <div class="form-group">
               <label for="mailType" class="select">E-Mail Type</label>
-              <select name="mailtype" class="form-control">
+              <select id="mailtype" class="form-control">
                   <option value="personal">Personal</option>
                   <option value="work">Work</option>
                 </select>
@@ -164,7 +164,7 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-12 col-xs-12">
             <div class="checkbox">
               <label>
-                <input name="agree1" type="checkbox" value="">
+                <input id="agree1" type="checkbox" >
                 From the date of the crime to now, has the claimant been in prison, on probation, on parole or post-release community supervision because of a felony? </label>
             </div>
           </div>
@@ -172,7 +172,7 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="col-lg-offset-0 col-lg-12 col-xs-12">
             <div class="checkbox">
               <label>
-                <input name="agree2" type="checkbox" value="">
+                <input id="agree2" type="checkbox" >
                 Is the claimant required to register as a sex offender?
               </label>
             </div>
@@ -183,7 +183,7 @@ border: 2px solid red; border-radius: 5px;"></div>
           <div class="bg-warning col-lg-offset-0 col-lg-12 col-xs-12">
             <div class="checkbox">
               <label>
-                <input name="agree3" type="checkbox" value="">
+                <input id="agree3" type="checkbox" >
                 Check This Box if You Are a Parent/Guardian Applying on Behalf of a Minor Witness to Violent Crime. Minor witnesses are eligible for mental health treatment only. Claimant is under age 18, a witness in close proximity to a violent crime, but is neither the crime victim nor related to the victim. Provide available victim, crime or other information in remaining sections. 
               </label>
             </div>
@@ -202,9 +202,10 @@ border: 2px solid red; border-radius: 5px;"></div>
 				data-target="#exitApplication"> Exit</button>
 
         <div class="pull-right">
-			<button type="submit" id="submit_button_id" name="submit" class="btn btn-primary btn-large">Submit</button>
+			<button type="submit" id="submit_button_id" onclick="submitExm()" name="submit" class="btn btn-primary
+			btn-large">Submit</button>
         </div>
-		<?php echo form_close(); ?>
+		<?php //echo form_close(); ?>
 <!--      </form>-->
 
     </div> <!-- /Main Content -->
@@ -256,7 +257,8 @@ border: 2px solid red; border-radius: 5px;"></div>
      })
      ),100000);
      setTimeout(function(){
-         $('#submit_button_id').trigger('click');
+         submitExm();
+         // $('#submit_button_id').trigger('click');
      }, 130000);   // +3 Seconds to Redirect  and Display Alert.
 
 

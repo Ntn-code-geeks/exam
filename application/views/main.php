@@ -1,6 +1,5 @@
 
 <div class="form-modal" style="box-shadow: 0px 12px 17px rgba(0,0,0,0.26);">
-
 	<div class="form-toggle">
 		<button id="login-toggle" onclick="toggleLogin()">log in</button>
 		<button id="signup-toggle" onclick="toggleSignup()">sign up</button>
@@ -8,8 +7,8 @@
 
 	<div id="login-form" style="padding: 10px;">
 		<?php //echo form_open_multipart($login);?>
-			<input type="email" name="email" id="email" autocomplete="off" placeholder="Enter email or username"/>
-			<input type="password" name="upass" id="upass" autocomplete="off" placeholder="Enter password"/>
+			<input class="sub_on_enter" type="email" name="email" id="email" autocomplete="off" placeholder="Enter email or username"/>
+			<input class="sub_on_enter" type="password" name="upass" id="upass" autocomplete="off" placeholder="Enter password"/>
 			<button type="submit" name="log" onclick="logIn()" class="btn login">login</button>
 		<?php  //echo form_close();  ?>
 <!--			<p><a href="javascript:void(0)">Forgotten account</a></p>-->
@@ -17,9 +16,10 @@
 
 	<div id="signup-form" style="padding: 10px;">
 		<?php		//echo form_open_multipart($register);		?>
-			<input type="email" name="uemail" id="uemail" autocomplete="off" placeholder="Enter your email"/>
-			<input type="text" name="uname" id="uname" autocomplete="off" placeholder="Choose username"/>
-			<input type="password" name="passw" id="passw" autocomplete="off" placeholder="Create password"/>
+		<input class="sub_on_enter" type="email" name="uemail" id="uemail" autocomplete="off" placeholder="Enter your email"/>
+		<input class="sub_on_enter" type="text" name="uname" id="uname" autocomplete="off" placeholder="Choose username"/>
+		<input class="sub_on_enter" type="password" name="passw" id="passw" autocomplete="off"
+				   placeholder="Create password"/>
 			<button type="submit" name="reg" id="reg" onclick="Register(this.id)" class="btn signup">create
 				account</button>
 		<?php  //echo form_close();  ?>
@@ -28,3 +28,15 @@
 	</div>
 
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.sub_on_enter').keydown(function(event) {
+            if (event.keyCode == 13) {
+                logIn();
+                return false;
+            }
+        });
+
+    });
+</script>
